@@ -1,0 +1,86 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+body{
+    background-color: orange;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+#wrapper{
+    
+    background-color: #fff;
+    width:400px ;
+    height: 250px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.box{
+    border: 4px solid yellow;
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    left: 25%;
+    top: 30%;
+}
+.boxes{
+    border: 4px solid yellow;
+    width: 20px ;
+    height: 30px;
+    position: absolute;
+    left: 296px;
+    top: 97px;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    width:0;
+    height: 80%;
+    background-color: yellow;
+    
+    animation: box 4s infinite;
+    
+}
+/* .box:hover::before{
+    width: 95%; */
+
+@keyframes box{
+    0%{ width: 0;}
+     25%{ width: 25%;}
+    50%{ width: 50%;}
+    75%{width: 75%;}
+    100%{ width: 95%;}}
+p{
+    position: absolute;
+    bottom:-80px;
+    left: 30px;
+    background-color: green;
+    padding: 15px 20px;
+    color: #fff;
+    border-radius: 10px;
+    transform: rotate(1deg);
+    
+     animation:  animation 1s infinite;
+    font-size: 20px;}
+   
+
+@keyframes animation{
+    0%{ transform:skewX(5deg);}
+    50%{transform: skewY( -5deg);}
+    75%{ transform:skewX(-5deg);}
+    100%{transform: skewY(5deg);}
+}
+p:hover{
+    background-color: #fff;
+    border: 2px solid green;
+    color: black;
+}
